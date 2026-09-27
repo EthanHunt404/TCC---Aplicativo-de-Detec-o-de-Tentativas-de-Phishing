@@ -22,7 +22,8 @@ ADR 0002 — Banco de dados: MongoDB
 Data: 25/09/2026 
 Status: Aceita
 Contexto: A base de templates de empresa e a lista de domínios de encurtamento precisam de um meio de armazenamento local (RNF-04).
-Decisão: MongoDB, hospedado localmente (localhost), com duas coleções (Templates de empresa; Domínios de encurtamento).
+Decisão: MongoDB, hospedado separadamente da aplicaçao principal, possuindo duas coleções principais (Templates de empresa; Domínios de encurtamento) 
+e varios outros arquivos usando o Template de padrao de registro específico de empresas, onde cada documento registra uma certa empresa e seus domínios oficiais
 Justificativa: O projeto usa dados nao estruturados e essa database em specifico a equipe possui boa familiaridade
 
 ADR 0003 — Biblioteca de acesso IMAP: MailKit

@@ -1,4 +1,6 @@
-namespace DetectorPhishing;
+using DetectorPhishing.Infrastructure;
+
+namespace DetectorPhishing.Domain;
 
 /// <summary>
 /// Implementa o algoritmo de analise descrito no Documento de Arquitetura,

@@ -1,4 +1,4 @@
-namespace DetectorPhishing;
+namespace DetectorPhishing.Domain;
 
 /// <summary>
 /// Reune as inconsistencias encontradas em uma mensagem e registra

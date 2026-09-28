@@ -1,4 +1,4 @@
-namespace DetectorPhishing;
+namespace DetectorPhishing.Domain;
 
 /// <summary>
 /// Descreve um motivo especifico pelo qual uma verificacao falhou

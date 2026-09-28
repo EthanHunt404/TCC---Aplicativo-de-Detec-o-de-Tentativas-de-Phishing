@@ -1,4 +1,4 @@
-namespace DetectorPhishing;
+namespace DetectorPhishing.Domain;
 
 /// <summary>
 /// Conhece o remetente e os hyperlinks de um e-mail recebido,

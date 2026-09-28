@@ -1,4 +1,7 @@
 using DetectorPhishing;
+using DetectorPhishing.Domain;
+using DetectorPhishing.Application;
+using DetectorPhishing.Infrastructure;
 using Xunit;
 
 namespace DetectorPhishing.Testes;
@@ -8,7 +11,8 @@ public static class EmailAnalistTests
     [Fact]
     public static void EmailSemHyperlinkEhIgnorado()
     {
-        var analista = new EmailAnalist(new ConsultaFake());
+        IConsulta consulta = new ConsultaFake();
+        var analista = new EmailAnalist(consulta);
         var conteudo = new ConteudoRelevante(
             "Sem links aqui", "remetente@empresa.com", "Empresa", Array.Empty<string>());
 

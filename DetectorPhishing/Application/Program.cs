@@ -2,7 +2,7 @@ using System.Reflection;
 using DetectorPhishing.Testes;
 using Xunit;
 
-namespace DetectorPhishing;
+namespace DetectorPhishing.Application;
 
 /// <summary>
 /// Ponto de entrada da PoC. A entrega atual e a propria suite de testes:

@@ -1,4 +1,6 @@
-namespace DetectorPhishing;
+using DetectorPhishing.Infrastructure;
+
+namespace DetectorPhishing.Testes;
 
 /// <summary>
 /// Implementacao provisoria de IConsulta com dados fixos, so para

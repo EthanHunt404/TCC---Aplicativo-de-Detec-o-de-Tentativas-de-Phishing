@@ -15,7 +15,7 @@ Conhece o remetente e os hyperlinks de um e-mail recebido, e diz se contém algu
 - `ConteudoBruto` (uma cópia do conteúdo bruto)
 - `EndereçoRemetente` (endereço de correio eletrônico)
 - `EmpresaRemetente` (nome da suposta empresa remetente)
-- `Hyperlinks` (lista de `Hyperlink`)
+- `Hyperlinks` (lista de `strings`)
 
 ### 1.2 Inconsistencia
 
@@ -32,7 +32,14 @@ Reúne as inconsistências encontradas em uma mensagem e registra quando foi ger
 - `Inconsistencias` (lista de `Inconsistencia`)
 - `DataGeracao`
 
-### 1.4 Classes fora de domínio — implementações sólidas
+### 1.4 EmailAnalist
+
+Executa o algoritmo de análise (seção 2) sobre um `ConteudoRelevante` e devolve um `RelatorioInconsistencias` quando o correio eletrônico é suspeito, ou nada quando não há o que reportar.
+
+- `Consulta` (referência a `IConsulta`, recebida na construção)
+- `RelatorioInconsistencias` Analisar(`ConteudoRelevante` conteudo)
+
+### 1.5 Classes fora de domínio — implementações sólidas
 
 `Capturador`: (captura o correio eletrônico para uma fila e filtra o conteúdo, entregando um `ConteudoRelevante` apenas quando um hyperlink é encontrado) 
 `MongoDBInterface`: (uma interface generica na database MongoDB para facilitar as consultas do `Algoritmo de Analise`)
